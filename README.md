@@ -1,20 +1,15 @@
-# open-entity-relation-extraction
 
-Knowledge triples extraction (entities and relations extraction) and knowledge base construction based on dependency syntax for open domain text.
+#基于依存句法分析，实现面向开放域文本的知识三元组抽取（实体和关系抽取）及知识库构建。
 
-基于依存句法分析，实现面向开放域文本的知识三元组抽取（实体和关系抽取）及知识库构建。
 
-Welcome to watch, star or fork.
+##自己完成的代码(原基础上做了修改)
 
-## Example
+code/demo/extract_demo.py
 
-> "中国国家主席习近平访问韩国，并在首尔大学发表演讲"
+code/core/nlp.py
 
-We can extract knowledge triples from the sentence as follows:
+code/core/extract.py
 
-- (中国, 国家主席, 习近平)
-- (习近平, 访问, 韩国)
-- (习近平, 发表演讲, 首尔大学)
 
 ## Project Structure
 
@@ -47,13 +42,8 @@ This repo was tested on Python 3.5+. The requirements are:
 cd ./code/demo/
 python extract_demo.py
 ```
-
-## Seven DSNF paradigms
-
-![DSNF](./img/DSNF.png)
-
-## References
-
-If you use the code, please kindly cite the following paper:
-
-Jia S, Li M, Xiang Y. Chinese Open Relation Extraction and Knowledge Base Establishment[J]. ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP), 2018, 17(3): 15.
+##result
+见 test_knowledge_triple.json
+例：
+{"编号": 1, "句子": "云南省高级人民法院审判员郭婷婷认真学习着二中全会公报", "知识": ["郭婷婷", "认真学习", "二中全会公报"]}
+{"编号": 3, "句子": "腾讯公司董事长杜兴明1996年在肯德基吃饭", "知识": ["杜兴明", "吃饭", "肯德基"]}
